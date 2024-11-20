@@ -79,10 +79,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
   void savePath() async {
     String? selectedDirectory = await FilePicker.platform.getDirectoryPath();
 
-    if (selectedDirectory == null) {
-      // User canceled the picker
-    }
-
     Preferences.setSavePath(selectedDirectory ?? Preferences.getSavePath());
 
     setState(() {

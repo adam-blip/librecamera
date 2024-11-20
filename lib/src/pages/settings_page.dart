@@ -230,10 +230,6 @@ class _SettingsPageState extends State<SettingsPage> {
             String? selectedDirectory =
                 await FilePicker.platform.getDirectoryPath();
 
-            if (selectedDirectory == null) {
-              // User canceled the picker
-            }
-
             Preferences.setSavePath(
                 selectedDirectory ?? Preferences.getSavePath());
 
